@@ -25,9 +25,10 @@ SECRET_KEY = 'django-insecure-ln8vs7zzy5d%5#zfs(f1jytwmk@q9@a#0-ps!1i8z_r(m_!7(t
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['user-authentication-django.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['user-authentication-django.onrender.com']
 #Allowed_Host=['user-authentication-django.onrender.com']
 # Application definition
+MAINTENANCE_MODE = True  # True = maintenance page, False = normal site
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -108,10 +109,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
@@ -124,3 +121,8 @@ SECURE_BROWSER_XSS_FILTER = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
+
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

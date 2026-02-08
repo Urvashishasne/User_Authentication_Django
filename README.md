@@ -35,4 +35,8 @@ This project is ideal for showcasing backend skills, database management, and fr
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 
-## 
+## Live Demo
+The project is deployed and accessible here:
+
+https://user-authentication-django.onrender.com
+
