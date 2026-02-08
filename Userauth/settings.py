@@ -28,8 +28,9 @@ DEBUG = False
 ALLOWED_HOSTS = ['user-authentication-django.onrender.com']
 #Allowed_Host=['user-authentication-django.onrender.com']
 # Application definition
-MAINTENANCE_MODE = True  # True = maintenance page, False = normal site
+ # True = maintenance page, False = normal site
 
+MAINTENANCE_MODE = os.getenv("MAINTENANCE_MODE", "False") == "True"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
