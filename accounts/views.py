@@ -40,7 +40,7 @@ def signup(request):
             user.set_password(form.cleaned_data['password'])
             user.save()
             messages.success(request, "User created successfully! Please login.")
-            return redirect('login')  # Redirect to login page
+            return redirect('dashboard')
         else:
             # Show form errors
             messages.error(request, "Please correct the errors below.")
