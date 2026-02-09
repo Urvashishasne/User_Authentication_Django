@@ -8,6 +8,8 @@ from .forms import UserRegisterForm
 
 def home(request):
     return render(request, 'accounts/home.html')
+def dashboard(request):
+    return render(request,'accounts/dashboard.html')
 def signup(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
