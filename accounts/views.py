@@ -6,8 +6,6 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 from django.views.generic import TemplateView
 
-class MaintenanceView(TemplateView):
-    template_name = "accounts/maintenance.html"
 
 def home(request):
     return render(request, 'accounts/home.html')
